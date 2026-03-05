@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - HTML & CSS : faire une page propre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="back" href="index.html">← Retour</a>
+        
+        <div class="credits">
+            <span class="gem">💎</span>
+            <span id="creditsValue">10 crédits</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="detail-head">
+            <div class="big-avatar" style="background: linear-gradient(135deg, #0ea5e9, #22c55e);">HW</div>
+            <h1 class="detail-title">HTML & CSS : faire une page propre</h1>
+            <p class="detail-author">Par @web_beginner</p>
+
+            <div class="detail-rating">
+                <span class="stars">★★★★★</span>
+                <span>4.6/5 (19 avis)</span>
+            </div>
+
+            <div class="detail-desc">
+                <h2>Description</h2>
+                <p>
+                    Maîtrise les fondamentaux du HTML et CSS pour créer des pages web propres et responsives.
+                    On va partir de zéro et construire ensemble plusieurs projets concrets.
+                </p>
+                <p>
+                    Au programme : structure HTML, sélecteurs CSS, Flexbox, Grid, et les bonnes pratiques
+                    pour avoir un code clean et maintenable. À la fin, tu seras capable de créer ta propre page web ! 🌐
+                </p>
+
+                <p class="muted"><strong>Format :</strong> 📄 PDF avec exemples de code + mini-projets</p>
+                <p class="muted"><strong>Durée :</strong> ~3h de lecture et pratique</p>
+                <p class="muted"><strong>Prix :</strong> 💎 10 crédits</p>
+            </div>
+
+            <button class="btn btn-blue full" onclick="unlockSkill(10, 'HTML CSS')">
+                Débloquer cette compétence →
+            </button>
+        </div>
+
+        <!-- Section commentaires -->
+        <div class="comments">
+            <h2>Avis et commentaires (19)</h2>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #22c55e, #0ea5e9);">SO</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@sophie_dev</strong>
+                        <span class="stars small">★★★★★</span>
+                        <span class="muted">5/5</span>
+                    </div>
+                    <p>"Super guide ! Les exemples sont très bien choisis et progressifs. J'ai tout compris"</p>
+                    <p class="muted small">il y a 4 jours • Répondre (2)</p>
+                </div>
+            </div>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">LU</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@lucas_web</strong>
+                        <span class="stars small">★★★★☆</span>
+                        <span class="muted">4/5</span>
+                    </div>
+                    <p>"Bon cours, mais j'aurais aimé plus d'infos sur les animations CSS"</p>
+                    <p class="muted small">il y a 1 semaine • Répondre (0)</p>
+                </div>
+            </div>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">EM</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@emma_design</strong>
+                        <span class="stars small">★★★★★</span>
+                        <span class="muted">5/5</span>
+                    </div>
+                    <p>"Parfait pour débuter ! Les mini-projets m'ont vraiment aidée à pratiquer 💪"</p>
+                    <p class="muted small">il y a 3 semaines • Répondre (4)</p>
+                </div>
+            </div>
+
+            <button class="btn btn-outline full">Laisser un commentaire</button>
+            <p class="muted small center">(Réservé aux personnes ayant accédé à la compétence)</p>
+        </div>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

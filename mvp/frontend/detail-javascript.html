@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - JavaScript : bases pour le web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="back" href="index.html">← Retour</a>
+        
+        <div class="credits">
+            <span class="gem">💎</span>
+            <span id="creditsValue">10 crédits</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="detail-head">
+            <div class="big-avatar" style="background: linear-gradient(135deg, #fb7185, #f59e0b);">JS</div>
+            <h1 class="detail-title">JavaScript : bases pour le web</h1>
+            <p class="detail-author">Par @js_tips</p>
+
+            <div class="detail-rating">
+                <span class="stars">★★★★☆</span>
+                <span>4.1/5 (6 avis)</span>
+            </div>
+
+            <div class="detail-desc">
+                <h2>Description</h2>
+                <p>
+                    Apprends JavaScript de A à Z et rends tes pages web interactives !
+                    On va voir les variables, les fonctions, le DOM, les événements, et plein d'autres trucs cool.
+                </p>
+                <p>
+                    Ce cours est idéal si tu connais déjà HTML/CSS et que tu veux passer au niveau supérieur.
+                    Avec JavaScript, tu vas pouvoir créer des animations, des formulaires dynamiques, et bien plus ! ⚡
+                </p>
+
+                <p class="muted"><strong>Format :</strong> 🎥 Vidéos courtes + exercices pratiques</p>
+                <p class="muted"><strong>Durée :</strong> ~3h30 de contenu</p>
+                <p class="muted"><strong>Prix :</strong> 💎 12 crédits</p>
+            </div>
+
+            <button class="btn btn-blue full" onclick="unlockSkill(12, 'JavaScript')">
+                Débloquer cette compétence →
+            </button>
+        </div>
+
+        <!-- Section commentaires -->
+        <div class="comments">
+            <h2>Avis et commentaires (6)</h2>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">TH</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@theo_dev</strong>
+                        <span class="stars small">★★★★☆</span>
+                        <span class="muted">4/5</span>
+                    </div>
+                    <p>"Bon cours pour débuter, mais certains concepts mériteraient plus d'explications"</p>
+                    <p class="muted small">il y a 1 semaine • Répondre (1)</p>
+                </div>
+            </div>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #f59e0b, #10b981);">CA</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@camille_js</strong>
+                        <span class="stars small">★★★★★</span>
+                        <span class="muted">5/5</span>
+                    </div>
+                    <p>"Les exercices sont top ! J'ai enfin compris comment marche addEventListener"</p>
+                    <p class="muted small">il y a 2 semaines • Répondre (0)</p>
+                </div>
+            </div>
+
+            <button class="btn btn-outline full">Laisser un commentaire</button>
+            <p class="muted small center">(Réservé aux personnes ayant accédé à la compétence)</p>
+        </div>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Félicitations !</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <img class="logo" src="assets/logo.png" alt="SkillSwap Logo">
+            <span class="brand-name">SkillSwap</span>
+        </div>
+        
+        <a href="profil.html" class="profile-dot-link">TC</a>
+    </header>
+
+    <main class="container" style="text-align: center; padding: 60px 20px;">
+        <div style="font-size: 5rem; margin-bottom: 20px;">🎉</div>
+        <h1>Félicitations !</h1>
+        <p style="margin: 20px 0;">Tu viens de débloquer une nouvelle compétence !</p>
+
+        <div style="background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 20px; margin: 24px auto; max-width: 400px;">
+            <strong style="font-size: 1.2rem;">Compétence débloquée</strong><br>
+            <span style="color: #6b7280;">Le contenu t'a été envoyé par email</span>
+        </div>
+
+        <div style="background: #eef2ff; padding: 16px; border-radius: 12px; margin: 24px auto; max-width: 300px; font-size: 1.1rem;">
+            Nouveau solde <span style="font-size: 1.3rem;">💎</span> : <strong id="newBalance">-- crédits</strong>
+        </div>
+
+        <div style="margin-top: 32px;">
+            <a class="btn btn-green" href="index.html" style="display: inline-block; min-width: 200px;">Retour à l'accueil</a>
+        </div>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+    <script>
+        // Afficher le nouveau solde de crédits
+        window.addEventListener('load', () => {
+            const savedCredits = localStorage.getItem('userCredits');
+            if (savedCredits) {
+                const credits = JSON.parse(savedCredits);
+                document.getElementById('newBalance').textContent = credits + ' crédits';
+            }
+        });
+    </script>
+</body>
+</html>

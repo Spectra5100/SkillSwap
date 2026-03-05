@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Apprendre à utiliser Figma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="back" href="index.html">← Retour</a>
+        
+        <div class="credits">
+            <span class="gem">💎</span>
+            <span id="creditsValue">10 crédits</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="detail-head">
+            <div class="big-avatar" style="background: linear-gradient(135deg, #18b06a, #2f6cf6);">MD</div>
+            <h1 class="detail-title">Apprendre à utiliser Figma</h1>
+            <p class="detail-author">Par @marie_design</p>
+
+            <div class="detail-rating">
+                <span class="stars">★★★★☆</span>
+                <span>4.8/5 (12 avis)</span>
+            </div>
+
+            <div class="detail-desc">
+                <h2>Description</h2>
+                <p>
+                    Un guide complet pour maîtriser les bases de Figma en 2 heures.
+                    Tu apprendras à créer des frames, utiliser l'auto-layout, gérer les composants
+                    et bien plus encore !
+                </p>
+                <p>
+                    Ce cours est parfait pour les débutants qui veulent se lancer dans le design d'interface.
+                    Pas besoin d'expérience préalable, juste de la motivation 🚀
+                </p>
+
+                <p class="muted"><strong>Format :</strong> 🌐 Cours en ligne (PDF + vidéos)</p>
+                <p class="muted"><strong>Durée :</strong> ~2h de contenu</p>
+                <p class="muted"><strong>Prix :</strong> 💎 20 crédits</p>
+            </div>
+
+            <button class="btn btn-blue full" onclick="unlockSkill(20, 'Figma')">
+                Débloquer cette compétence →
+            </button>
+        </div>
+
+        <!-- Section commentaires -->
+        <div class="comments">
+            <h2>Avis et commentaires (12)</h2>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">LS</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@lisa_student</strong>
+                        <span class="stars small">★★★★★</span>
+                        <span class="muted">5/5</span>
+                    </div>
+                    <p>"Super tuto, très clair ! J'ai enfin compris comment marche l'auto-layout "</p>
+                    <p class="muted small">il y a 3 jours • Répondre (2)</p>
+                </div>
+            </div>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">TB</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@tom_beginner</strong>
+                        <span class="stars small">★★★★☆</span>
+                        <span class="muted">4/5</span>
+                    </div>
+                    <p>"Bien expliqué, mais la partie auto-layout était un peu courte à mon goût. Sinon RAS !"</p>
+                    <p class="muted small">il y a 1 semaine • Répondre (0)</p>
+                </div>
+            </div>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #10b981, #06b6d4);">AK</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@alex_kreativ</strong>
+                        <span class="stars small">★★★★★</span>
+                        <span class="muted">5/5</span>
+                    </div>
+                    <p>"Parfait pour débuter, j'ai pu créer ma première maquette en suivant le cours "</p>
+                    <p class="muted small">il y a 2 semaines • Répondre (1)</p>
+                </div>
+            </div>
+
+            <button class="btn btn-outline full">Laisser un commentaire</button>
+            <p class="muted small center">(Réservé aux personnes ayant accédé à la compétence)</p>
+        </div>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

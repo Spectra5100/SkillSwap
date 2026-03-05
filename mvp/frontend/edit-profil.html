@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Modifier mon profil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar-simple">
+        <a class="back" href="profil.html">←</a>
+        <span class="header-title">Modifier le profil</span>
+        <button class="save-btn">✓</button>
+    </header>
+
+    <main class="container edit-profile-container">
+        
+        <!-- Avatar -->
+        <div class="edit-avatar-section">
+            <div class="profile-avatar-big editable">TC</div>
+            <button class="change-avatar-btn">Changer l'avatar</button>
+        </div>
+
+        <!-- Formulaire d'édition -->
+        <form class="edit-profile-form">
+            
+            <div class="field">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" value="Tony_cooking">
+            </div>
+
+            <div class="field">
+                <label for="bio">Bio</label>
+                <textarea id="bio" rows="3">Cuisine du quotidien & techniques de base
+Apprendre à bien cuisiner, pas à pas</textarea>
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="tony.cooking@email.com">
+            </div>
+
+            <div class="field">
+                <label for="location">Localisation (optionnel)</label>
+                <input type="text" id="location" placeholder="Paris, France">
+            </div>
+
+            <h2 class="section-title">Préférences</h2>
+
+            <div class="field checkbox-field">
+                <label>
+                    <input type="checkbox" checked>
+                    <span>Recevoir les notifications par email</span>
+                </label>
+            </div>
+
+            <div class="field checkbox-field">
+                <label>
+                    <input type="checkbox" checked>
+                    <span>Afficher mon profil dans la recherche</span>
+                </label>
+            </div>
+
+            <div class="field checkbox-field">
+                <label>
+                    <input type="checkbox">
+                    <span>Mode sombre (pas encore dispo)</span>
+                </label>
+            </div>
+
+            <h2 class="section-title">Confidentialité</h2>
+
+            <div class="field">
+                <label for="visibility">Qui peut voir mes compétences ?</label>
+                <select id="visibility">
+                    <option value="public">Tout le monde</option>
+                    <option value="contacts">Mes contacts uniquement</option>
+                    <option value="private">Personne</option>
+                </select>
+            </div>
+
+            <div class="actions">
+                <button type="button" class="btn btn-outline" onclick="window.location.href='profil.html'">Annuler</button>
+                <button type="submit" class="btn btn-blue">Enregistrer</button>
+            </div>
+
+        </form>
+
+        <!-- Section danger zone -->
+        <div class="danger-zone">
+            <h3>Zone de danger</h3>
+            <button class="btn-danger">Supprimer mon compte</button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Gestion de la sauvegarde
+        const form = document.querySelector('.edit-profile-form');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const bio = document.getElementById('bio').value;
+            
+            console.log('Sauvegarde du profil:', { username, bio });
+            
+            // TODO: Envoyer ça à une API
+            alert('Profil mis à jour !');
+            
+            // Redirection
+            window.location.href = 'profil.html';
+        });
+
+        // Gestion du changement d'avatar
+        // FIXME: Pas encore implémenté correctement
+        const changeAvatarBtn = document.querySelector('.change-avatar-btn');
+        changeAvatarBtn.addEventListener('click', () => {
+            alert('Fonctionnalité en cours de développement 🚧');
+        });
+    </script>
+</body>
+</html>

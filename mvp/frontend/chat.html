@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar-chat">
+        <a class="back" href="discussions.html">←</a>
+        <div class="chat-header-info">
+            <strong>Apprendre Figma</strong>
+        </div>
+        <button class="info-btn">ℹ️</button>
+    </header>
+
+    <main class="chat-container">
+        <!-- Messages -->
+        <div class="messages">
+            
+            <div class="message message-other">
+                <div class="message-avatar">LS</div>
+                <div class="message-bubble">
+                    <strong class="message-author">@lisa_student</strong>
+                    <p>D'autres tips pour l'auto-layout ? Je n'arrive pas à bien espacer mes éléments</p>
+                    <span class="message-time">Il y a 10 min</span>
+                </div>
+            </div>
+
+            <div class="message message-me">
+                <div class="message-bubble">
+                    <p>Je t'explique : tu sélectionnes tous tes éléments, puis tu appuies sur Shift + A. Ça crée un auto-layout automatiquement !</p>
+                    <span class="message-time">Il y a 8 min</span>
+                </div>
+            </div>
+
+            <div class="message message-other">
+                <div class="message-avatar" style="background: linear-gradient(135deg, #18b06a, #2f6cf6);">MD</div>
+                <div class="message-bubble">
+                    <strong class="message-author">@marie_design</strong>
+                    <p>Exactement ! Et n'oublie pas de régler le spacing dans les paramètres.</p>
+                    <span class="message-time">Il y a 5 min</span>
+                </div>
+            </div>
+
+            <div class="message message-me">
+                <div class="message-bubble">
+                    <p>N'hésite pas si tu as d'autres questions @lisa_student ! On est là pour s'entraider 😊</p>
+                    <span class="message-time">A l'instant</span>
+                </div>
+            </div>
+
+            <div class="message message-other">
+                <div class="message-avatar">LS</div>
+                <div class="message-bubble">
+                    <strong class="message-author">@lisa_student</strong>
+                    <p>Au fait, est-ce que quelqu'un a réussi l'exercice sur les composants ? Je bloque sur la partie variants 🤔</p>
+                    <span class="message-time">A l'instant</span>
+                </div>
+            </div>
+
+            <div class="message message-other typing">
+                <div class="message-avatar" style="background: linear-gradient(135deg, #18b06a, #2f6cf6);">MD</div>
+                <div class="message-bubble">
+                    <div class="typing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="message-time">A l'instant</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Input pour écrire un message -->
+    <footer class="chat-input-container">
+        <input type="text" class="chat-input" placeholder="Écrire un message..." id="messageInput">
+        <button class="emoji-btn">😊</button>
+        <button class="send-btn" id="sendBtn">➡️</button>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gestion de l'envoi de message
+        const input = document.getElementById('messageInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const messagesContainer = document.querySelector('.messages');
+
+        // FIXME: Ça marche pas encore super bien, faut que je règle ça
+        sendBtn.addEventListener('click', () => {
+    const messageDiv = document.createElement('div');
+    messagesContainer.appendChild(messageDiv);
+            });
+
+                // Créer un nouveau message
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message message-me';
+                messageDiv.innerHTML = `
+                    <div class="message-bubble">
+                        <p>${text}</p>
+                        <span class="message-time">A l'instant</span>
+                    </div>
+                `;
+                
+                // Retirer l'indicateur de typing
+                const typingMsg = document.querySelector('.typing');
+                if (typingMsg) typingMsg.remove();
+                
+                messagesContainer.appendChild(messageDiv);
+                input.value = '';
+                
+                // Scroll vers le bas
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                console.log('Message envoyé:', text);
+            }
+        });
+
+        // Envoyer avec Enter
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendBtn.click();
+            }
+        });
+
+        // Auto-scroll au chargement
+        window.addEventListener('load', () => {
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        });
+    </script>
+</body>
+</html>

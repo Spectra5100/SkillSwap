@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - UI/UX : faire une maquette claire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="back" href="index.html">← Retour</a>
+        
+        <div class="credits">
+            <span class="gem">💎</span>
+            <span id="creditsValue">10 crédits</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="detail-head">
+            <div class="big-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">UX</div>
+            <h1 class="detail-title">UI/UX : faire une maquette claire</h1>
+            <p class="detail-author">Par @designlab</p>
+
+            <div class="detail-rating">
+                <span class="stars">★★★★★</span>
+                <span>4.7/5 (11 avis)</span>
+            </div>
+
+            <div class="detail-desc">
+                <h2>Description</h2>
+                <p>
+                    Apprends à créer des maquettes d'interface claires et professionnelles.
+                    On va couvrir les principes du design UX/UI, la hiérarchie visuelle, la typographie, 
+                    les couleurs et comment organiser ton workflow de design.
+                </p>
+                <p>
+                    Que tu utilises Figma, Adobe XD ou Sketch, les principes restent les mêmes !
+                    À la fin de ce cours, tu seras capable de créer des maquettes qui déchirent 🎨
+                </p>
+
+                <p class="muted"><strong>Format :</strong> 📄 PDF avec templates et exemples</p>
+                <p class="muted"><strong>Durée :</strong> ~2h30 de lecture</p>
+                <p class="muted"><strong>Prix :</strong> 💎 18 crédits</p>
+            </div>
+
+            <button class="btn btn-blue full" onclick="unlockSkill(18, 'UI/UX')">
+                Débloquer cette compétence →
+            </button>
+        </div>
+
+        <!-- Section commentaires -->
+        <div class="comments">
+            <h2>Avis et commentaires (11)</h2>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">JU</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@julie_design</strong>
+                        <span class="stars small">★★★★★</span>
+                        <span class="muted">5/5</span>
+                    </div>
+                    <p>"Les templates fournis sont géniaux ! Ça m'a vraiment aidée à structurer mes projets ✨"</p>
+                    <p class="muted small">il y a 6 jours • Répondre (3)</p>
+                </div>
+            </div>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #10b981, #0ea5e9);">MA</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@maxime_ui</strong>
+                        <span class="stars small">★★★★☆</span>
+                        <span class="muted">4/5</span>
+                    </div>
+                    <p>"Très bon cours ! J'aurais juste aimé plus d'exemples concrets d'applications mobiles"</p>
+                    <p class="muted small">il y a 2 semaines • Répondre (1)</p>
+                </div>
+            </div>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">CL</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@clara_ux</strong>
+                        <span class="stars small">★★★★★</span>
+                        <span class="muted">5/5</span>
+                    </div>
+                    <p>"Cours complet et bien structuré. Les principes UX sont super bien expliqués 🔥"</p>
+                    <p class="muted small">il y a 1 mois • Répondre (2)</p>
+                </div>
+            </div>
+
+            <button class="btn btn-outline full">Laisser un commentaire</button>
+            <p class="muted small center">(Réservé aux personnes ayant accédé à la compétence)</p>
+        </div>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header avec logo et crédits -->
+    <header class="topbar">
+        <div class="brand">
+            <img class="logo" src="assets/logo.png" alt="SkillSwap Logo">
+            <span class="brand-name">SkillSwap</span>
+        </div>
+        
+        <div class="header-right">
+            <div class="credits">
+                <span class="gem">💎</span>
+                <span id="creditsValue">10 crédits</span>
+            </div>
+            <a href="profil.html" class="profile-dot-link">TC</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Barre de recherche -->
+        <div class="searchbar">
+            <span class="search-ico">🔍</span>
+            <input id="searchInput" type="search" placeholder="Rechercher une compétence">
+        </div>
+
+        <!-- TODO: Ajouter plus d'onglets quand on pourra -->
+        <div class="tabs">
+            <a class="tab active" href="index.html">Toutes</a>
+            <a class="tab" href="#" data-filter="web">Web Dev</a>
+            <a class="tab" href="#" data-filter="design">Design</a>
+            <a class="tab" href="#" data-filter="autre">Autre</a>
+        </div>
+
+        <!-- Grille des cartes de compétences -->
+        <section id="cards" class="cards">
+            
+            <!-- Card Figma -->
+            <article class="card" data-category="design">
+                <div class="card-head">
+                    <div class="avatar" style="background: linear-gradient(135deg, #18b06a, #2f6cf6);">MD</div>
+                    <div>
+                        <h3 class="card-title">Apprendre à utiliser Figma</h3>
+                        <p class="muted small">@marie_design • 4.8 (12 avis)</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="muted small">En ligne • 💎 20 crédits</span>
+                    <a class="btn btn-blue" href="detail-figma.html">Voir →</a>
+                </div>
+            </article>
+
+            <!-- Card Python -->
+            <article class="card" data-category="web">
+                <div class="card-head">
+                    <div class="avatar" style="background: linear-gradient(135deg, #2f6cf6, #7c3aed);">AC</div>
+                    <div>
+                        <h3 class="card-title">Débuter en Python</h3>
+                        <p class="muted small">@alex_code • 4.2 (8 avis)</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="muted small">🎥 Vidéo • 💎 30 crédits</span>
+                    <a class="btn btn-blue" href="detail-python.html">Voir →</a>
+                </div>
+            </article>
+
+            <!-- Card HTML CSS -->
+            <article class="card" data-category="web">
+                <div class="card-head">
+                    <div class="avatar" style="background: linear-gradient(135deg, #0ea5e9, #22c55e);">HW</div>
+                    <div>
+                        <h3 class="card-title">HTML & CSS : faire une page propre</h3>
+                        <p class="muted small">@web_beginner • 4.6 (19 avis)</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="muted small">📄 PDF • 💎 10 crédits</span>
+                    <a class="btn btn-blue" href="detail-html-css.html">Voir →</a>
+                </div>
+            </article>
+
+            <!-- Card JavaScript -->
+            <article class="card" data-category="web">
+                <div class="card-head">
+                    <div class="avatar" style="background: linear-gradient(135deg, #fb7185, #f59e0b);">JS</div>
+                    <div>
+                        <h3 class="card-title">JavaScript : bases pour le web</h3>
+                        <p class="muted small">@js_tips • 4.1 (6 avis)</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="muted small">🎥 Vidéo • 💎 12 crédits</span>
+                    <a class="btn btn-blue" href="detail-javascript.html">Voir →</a>
+                </div>
+            </article>
+
+            <!-- Card UI/UX -->
+            <article class="card" data-category="design">
+                <div class="card-head">
+                    <div class="avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">UX</div>
+                    <div>
+                        <h3 class="card-title">UI/UX : faire une maquette claire</h3>
+                        <p class="muted small">@designlab • 4.7 (11 avis)</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="muted small">📄 PDF • 💎 18 crédits</span>
+                    <a class="btn btn-blue" href="detail-uiux.html">Voir →</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

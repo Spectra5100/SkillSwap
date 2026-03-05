@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Mes discussions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar-simple">
+        <div class="brand">
+            <img class="logo-small" src="assets/logo.png" alt="SkillSwap">
+            <span class="brand-name">SkillSwap</span>
+        </div>
+        <a href="profil.html" class="profile-dot-link">TC</a>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Mes discussions</h1>
+
+        <!-- Liste des conversations -->
+        <div class="discussions-list">
+            
+            <a href="chat.html?user=marie_design" class="discussion-item">
+                <div class="discussion-avatar" style="background: linear-gradient(135deg, #18b06a, #2f6cf6);">FG</div>
+                <div class="discussion-content">
+                    <div class="discussion-header">
+                        <strong class="discussion-name">Apprendre Figma</strong>
+                        <span class="discussion-badge unread">●</span>
+                    </div>
+                    <p class="discussion-users">@marie_design + 8 autres</p>
+                    <p class="discussion-preview">"Au fait, est ce que quelqu'un a r..."</p>
+                </div>
+                <div class="discussion-time">
+                    <span class="muted small">A l'instant</span>
+                </div>
+            </a>
+
+            <a href="chat.html?user=alex_code" class="discussion-item">
+                <div class="discussion-avatar" style="background: linear-gradient(135deg, #2f6cf6, #7c3aed);">🐍</div>
+                <div class="discussion-content">
+                    <div class="discussion-header">
+                        <strong class="discussion-name">Débuter en Python</strong>
+                    </div>
+                    <p class="discussion-users">@alex_code + 5 autres</p>
+                    <p class="discussion-preview">"J'ai une question sur les boucles..."</p>
+                </div>
+                <div class="discussion-time">
+                    <span class="muted small">2h</span>
+                </div>
+            </a>
+
+            <a href="chat.html?user=sam_crafts" class="discussion-item">
+                <div class="discussion-avatar" style="background: linear-gradient(135deg, #f6d02f, #18b06a);">🧶</div>
+                <div class="discussion-content">
+                    <div class="discussion-header">
+                        <strong class="discussion-name">Lire un diagramme de crochet</strong>
+                    </div>
+                    <p class="discussion-users">@sam_crafts + 3 autres</p>
+                    <p class="discussion-preview">"RDV demain à 14h !"</p>
+                </div>
+                <div class="discussion-time">
+                    <span class="muted small">Hier</span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Message si aucune discussion -->
+        <div class="empty-state">
+            <span class="empty-icon">💬</span>
+            <p class="empty-text">Aucune autre discussion</p>
+        </div>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item active">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

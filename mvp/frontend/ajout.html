@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Proposer une compétence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <img class="logo" src="assets/logo.png" alt="SkillSwap Logo">
+            <span class="brand-name">SkillSwap</span>
+        </div>
+        
+        <a href="profil.html" class="profile-dot-link">TC</a>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Proposer une compétence</h1>
+        <p class="muted">Partage tes connaissances avec la communauté et gagne des crédits !</p>
+
+        <form class="form">
+            <div class="field">
+                <label for="skillTitle">Titre de la compétence *</label>
+                <div class="row">
+                    <input type="text" id="skillTitle" placeholder="Ex: Apprendre à faire du pain maison" required>
+                    <div class="credits-mini">
+                        💎 <span id="priceValue">0</span> 
+                        <!-- TODO: Ajouter un vrai système de pricing dynamique -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="category">Catégorie *</label>
+                <div class="row">
+                    <select id="category" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                        <option value="">Sélectionne une catégorie</option>
+                        <option value="web">Développement Web</option>
+                        <option value="design">Design & UI/UX</option>
+                        <option value="cuisine">Cuisine & Gastronomie</option>
+                        <option value="sport">Sport & Fitness</option>
+                        <option value="musique">Musique & Audio</option>
+                        <option value="langues">Langues étrangères</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    <span class="select-arrow">▾</span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="description">Description *</label>
+                <textarea id="description" placeholder="Décris ta compétence en détail... Qu'est-ce qu'on va apprendre ? Pour qui c'est destiné ? Combien de temps ça prend ?" required></textarea>
+                <p class="muted small">Minimum 50 caractères</p>
+            </div>
+
+            <h2 class="page-subtitle">Contenu de la compétence</h2>
+            <p class="muted small">Tu peux ajouter un lien vers une vidéo, un document, ou uploader un fichier.</p>
+
+            <div class="field">
+                <label for="contentUrl">Lien URL (optionnel)</label>
+                <input type="url" id="contentUrl" placeholder="https://www.youtube.com/watch?v=...">
+            </div>
+
+            <div class="field">
+                <label for="fileUpload">Fichier (optionnel)</label>
+                <div class="upload-box" id="uploadBox">
+                    <span class="upload-icon">📁</span>
+                    <p>Clique ici pour uploader un fichier</p>
+                    <p class="muted small">PDF, vidéo, images (Max 50 MB)</p>
+                </div>
+                <input type="file" id="fileUpload" style="display: none;" accept=".pdf,.mp4,.mov,.jpg,.jpeg,.png">
+            </div>
+
+            <div class="field">
+                <label for="price">Prix en crédits</label>
+                <input type="number" id="price" placeholder="10" min="0" max="100" value="10">
+                <p class="muted small">Recommandé : 10-30 crédits pour un cours simple, 30-50 pour un cours complet</p>
+            </div>
+
+            <div class="actions">
+                <a class="btn btn-outline" href="index.html">Annuler</a>
+                <button class="btn btn-blue" type="submit">Publier ✈️</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item active">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // Gestion de l'upload de fichier
+        const uploadBox = document.getElementById('uploadBox');
+        const fileInput = document.getElementById('fileUpload');
+        
+        uploadBox.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                const fileName = e.target.files[0].name;
+                uploadBox.innerHTML = `
+                    <span class="upload-icon">✅</span>
+                    <p><strong>${fileName}</strong></p>
+                    <p class="muted small">Fichier sélectionné</p>
+                `;
+                console.log('Fichier uploadé:', fileName);
+            }
+        });
+        
+        // Mise à jour du prix affiché
+        priceInput.addEventListener('input', (e) => {
+    priceDisplay.textContent = e.target.value; });
+        
+        if (priceInput && priceDisplay) {
+            priceInput.addEventListener('input', (e) => {
+                priceDisplay.textContent = e.target.value;
+            });
+        }
+    </script>
+</body>
+</html>

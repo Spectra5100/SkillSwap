@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Débuter en Python</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="back" href="index.html">← Retour</a>
+        
+        <div class="credits">
+            <span class="gem">💎</span>
+            <span id="creditsValue">10 crédits</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="detail-head">
+            <div class="big-avatar" style="background: linear-gradient(135deg, #2f6cf6, #7c3aed);">AC</div>
+            <h1 class="detail-title">Débuter en Python</h1>
+            <p class="detail-author">Par @alex_code</p>
+
+            <div class="detail-rating">
+                <span class="stars">★★★★☆</span>
+                <span>4.2/5 (8 avis)</span>
+            </div>
+
+            <div class="detail-desc">
+                <h2>Description</h2>
+                <p>
+                    Apprends les bases de Python avec ce cours vidéo complet et accessible.
+                    On va couvrir les variables, les boucles, les fonctions, et même faire quelques petits projets sympas !
+                </p>
+                <p>
+                    Python est le langage parfait pour débuter en programmation. Simple à apprendre, 
+                    mais super puissant. À la fin de ce cours, tu seras capable de créer tes propres scripts 
+                </p>
+
+                <p class="muted"><strong>Format :</strong> 🎥 Vidéos + exercices pratiques</p>
+                <p class="muted"><strong>Durée :</strong> ~4h de vidéos</p>
+                <p class="muted"><strong>Prix :</strong> 💎 30 crédits</p>
+            </div>
+
+            <button class="btn btn-blue full" onclick="unlockSkill(30, 'Python')">
+                Débloquer cette compétence →
+            </button>
+        </div>
+
+        <!-- Section commentaires -->
+        <div class="comments">
+            <h2>Avis et commentaires (8)</h2>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #ef4444, #f59e0b);">MJ</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@marie_junior</strong>
+                        <span class="stars small">★★★★★</span>
+                        <span class="muted">5/5</span>
+                    </div>
+                    <p>"Excellent cours ! Les explications sont claires et les exercices bien pensés "</p>
+                    <p class="muted small">il y a 5 jours • Répondre (1)</p>
+                </div>
+            </div>
+
+            <div class="comment-card">
+                <div class="mini-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">PL</div>
+                <div>
+                    <div class="comment-top">
+                        <strong>@paul_learn</strong>
+                        <span class="stars small">★★★★☆</span>
+                        <span class="muted">4/5</span>
+                    </div>
+                    <p>"Bon cours mais j'aurais aimé plus d'exemples sur les classes et la POO"</p>
+                    <p class="muted small">il y a 2 semaines • Répondre (3)</p>
+                </div>
+            </div>
+
+            <button class="btn btn-outline full">Laisser un commentaire</button>
+            <p class="muted small center">(Réservé aux personnes ayant accédé à la compétence)</p>
+        </div>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

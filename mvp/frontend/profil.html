@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Mon Profil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar-simple">
+        <a class="back" href="index.html">←</a>
+        <a href="edit-profil.html" class="settings-icon">⚙️</a>
+    </header>
+
+    <main class="container profile-container">
+        <!-- En-tête du profil -->
+        <div class="profile-header">
+            <div class="profile-avatar-big">TC</div>
+            <h1 class="profile-name">Tony_cooking</h1>
+            <p class="profile-bio">Cuisine du quotidien & techniques de base<br>Apprendre à bien cuisiner, pas à pas</p>
+        </div>
+
+        <!-- Onglets -->
+        <div class="profile-tabs">
+            <button class="profile-tab active" data-tab="proposed">
+                <span class="tab-icon">📋</span>
+            </button>
+            <button class="profile-tab" data-tab="unlocked">
+                <span class="tab-icon">📁</span>
+            </button>
+        </div>
+
+        <!-- Contenu des onglets -->
+        <div class="tab-content">
+            <!-- Onglet Compétences proposées -->
+            <div id="proposed-tab" class="tab-pane active">
+                
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <h3 class="skill-card-title">Connaître les produits de saison</h3>
+                        <button class="edit-btn">✏️</button>
+                    </div>
+                    <div class="skill-card-body">
+                        <p class="skill-desc">
+                            Avoir les connaissances des fruits, légumes et produits disponibles selon les saisons
+                            pour une cuisine plus fraîche et savoureuse.
+                        </p>
+                        <div class="skill-meta">
+                            <span class="muted small"><strong>Format:</strong> PDF</span>
+                            <span class="muted small">💎 20 crédits</span>
+                        </div>
+                    </div>
+                    <div class="skill-card-footer">
+                        <button class="btn-small btn-outline-small">commentaire</button>
+                        <button class="btn-small btn-blue-small">chat</button>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <h3 class="skill-card-title">Maîtriser les découpes</h3>
+                        <button class="edit-btn">✏️</button>
+                    </div>
+                    <div class="skill-card-body">
+                        <p class="skill-desc">
+                            Maîtrise des techniques de découpe culinaires (émincer, ciseler, julienne, brunoise)
+                        </p>
+                        <div class="skill-meta">
+                            <span class="muted small"><strong>Format:</strong> PDF</span>
+                            <span class="muted small">💎 0 crédits</span>
+                        </div>
+                    </div>
+                    <div class="skill-card-footer">
+                        <button class="btn-small btn-outline-small">commentaire</button>
+                        <button class="btn-small btn-blue-small">chat</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Onglet Compétences débloquées -->
+            <div id="unlocked-tab" class="tab-pane">
+                
+                <div class="skill-card unlocked">
+                    <div class="skill-card-header">
+                        <h3 class="skill-card-title">Apprendre à utiliser Figma</h3>
+                    </div>
+                    <div class="skill-card-body">
+                        <p class="muted small">Par @marie_design</p>
+                        <div class="unlocked-format">
+                            <span class="format-badge">📄 PDF</span>
+                        </div>
+                    </div>
+                    <div class="skill-card-footer">
+                        <button class="btn-small btn-outline-small">commentaire</button>
+                        <button class="btn-small btn-blue-small">chat</button>
+                    </div>
+                </div>
+
+                <div class="skill-card unlocked">
+                    <div class="skill-card-header">
+                        <h3 class="skill-card-title">Débuter en Python</h3>
+                    </div>
+                    <div class="skill-card-body">
+                        <p class="muted small">Par @alex_code</p>
+                        <div class="unlocked-format">
+                            <span class="format-badge">🎥 Vidéo</span>
+                        </div>
+                    </div>
+                    <div class="skill-card-footer">
+                        <button class="btn-small btn-outline-small">commentaire</button>
+                        <button class="btn-small btn-blue-small">chat</button>
+                    </div>
+                </div>
+
+                <div class="skill-card unlocked">
+                    <div class="skill-card-header">
+                        <h3 class="skill-card-title">Lire un diagramme de crochet</h3>
+                    </div>
+                    <div class="skill-card-body">
+                        <p class="muted small">Par @sam_crafts</p>
+                        <div class="unlocked-format">
+                            <span class="format-badge">📞 Zoom</span>
+                        </div>
+                    </div>
+                    <div class="skill-card-footer">
+                        <button class="btn-small btn-outline-small">commentaire</button>
+                        <button class="btn-small btn-blue-small">chat</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+        </a>
+        <a href="ajout.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+        </a>
+        <a href="discussions.html" class="nav-item">
+            <span class="nav-icon">💬</span>
+        </a>
+        <a href="profil.html" class="nav-item active">
+            <span class="nav-icon profile-icon">TC</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+    <script>
+        // Gestion des onglets du profil
+        // TODO: Améliorer ça, c'est un peu crade pour l'instant
+        const tabs = document.querySelectorAll('.profile-tab');
+        const panes = document.querySelectorAll('.tab-pane');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Retirer active de tous
+                tabs.forEach(t => t.classList.remove('active'));
+                panes.forEach(p => p.classList.remove('active'));
+                
+                // Ajouter active au cliqué
+                tab.classList.add('active');
+                const tabName = tab.getAttribute('data-tab');
+                document.getElementById(tabName + '-tab').classList.add('active');
+                
+                console.log('Onglet changé:', tabName);
+            });
+        });
+    </script>
+</body>
+</html>
