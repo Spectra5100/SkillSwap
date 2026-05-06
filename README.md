@@ -2,14 +2,14 @@
 
 Plateforme d'échange de compétences avec système de crédits. Les utilisateurs peuvent proposer leurs compétences et en débloquer d'autres.
 
-## 🚀 Installation
+## Installation
 
 ```bash
 # Ouvrir juste index.html dans le navigateur
 # Pas besoin de npm ou de serveur
 ```
 
-## 📁 Structure
+##  Structure
 
 ```
 ├── index.html           # Page d'accueil
@@ -23,29 +23,29 @@ Plateforme d'échange de compétences avec système de crédits. Les utilisateur
 └── assets/              # Images et logo
 ```
 
-## ✨ Fonctionnalités
+##  Fonctionnalités
 
-- 🔍 Recherche de compétences
-- 💎 Système de crédits (localStorage)
-- 👤 Profil utilisateur avec onglets
-- 💬 Chat en temps réel
-- 📱 Navigation mobile
+-  Recherche de compétences
+-  Système de crédits (localStorage)
+-  Profil utilisateur avec onglets
+-  Chat en temps réel
+-  Navigation mobile
 
-## 🐛 Bugs connus
+##  Bugs connus
 
 - Recherche limitée aux titres
 - Upload de fichier non fonctionnel
 - Messages du chat non sauvegardés
 - Responsive moyen sur petits écrans
 
-## 🔧 À faire
+##  À faire
 
 - [ ] Backend avec API
 - [ ] Vraie auth utilisateurs
 - [ ] Notifications temps réel
 - [ ] Mode sombre
 
-## 💻 Technologies
+##  Technologies
 
 HTML5 · CSS3 · JavaScript vanilla
 
